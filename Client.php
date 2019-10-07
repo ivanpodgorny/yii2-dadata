@@ -29,7 +29,7 @@ class Client extends \Dadata\Client implements Configurable
 
         $addresses = [];
         foreach ($result as $searchData) {
-            $addresses[] = $this->populate(new Address, $searchData['data']);
+            $addresses[] = $searchData['data'];
         }
 
         return $addresses;
