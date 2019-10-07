@@ -22,6 +22,9 @@ class Client extends \Dadata\Client implements Configurable
         $result = $this->query($this->prepareSuggestionsUri('suggest/address'), [
             'query' => $address,
             'count' => $count,
+            'locations'=> [
+                ['country'=> '*'],
+            ],
         ]);
 
         $addresses = [];
